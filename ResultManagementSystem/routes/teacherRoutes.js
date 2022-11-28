@@ -1,0 +1,13 @@
+var express = require("express");
+const router = express.Router();
+const teacherController = require("../controllers/teacherController.js");
+router.get('/login', teacherController.teacherLoginget);
+router.post('/login', teacherController.teacherLoginpost);
+router.get('/viewall', teacherController.teacherViewallget);
+router.get('/edit/:id', teacherController.teacherEditget);
+router.post('/edit/:id', teacherController.teacherEditpost);
+router.get('/delete/:id', teacherController.teacherDeleteget);
+router.get('/option', teacherController.teacherOptionget);
+router.post('/add', teacherController.teacherAddpost);
+router.get('/add', teacherController.teacherAddget);
+module.exports = router;
